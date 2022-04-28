@@ -1,5 +1,4 @@
 import react, { useEffect, useContext, useState } from "react";
-import { useLogin } from "../../hooks/accounts/useLogin";
 import { Text, SafeAreaView, View } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Button } from "../../components";
@@ -10,7 +9,6 @@ import jwtDecode from "jwt-decode";
 export function HomeScreen() {
   const [loading, setLoading] = useState(true);
   const [dataToken, setDataToken] = useState();
-  const [{ data }] = useLogin();
 
   useEffect(() => {
     setLoading(true);
@@ -24,8 +22,6 @@ export function HomeScreen() {
     setLoading(false);
     Fetch();
   }, []);
-
-  console.log(dataToken);
 
   const { signOut } = useContext(AuthContext);
 

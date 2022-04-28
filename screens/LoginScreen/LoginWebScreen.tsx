@@ -34,7 +34,6 @@ export function LoginWebScreen({ navigation }: any) {
   const [value, setValue] = useState("");
   const [formattedValue, setFormattedValue] = useState("");
   const [code, setCode] = useState("");
-  const [valid, setValid] = useState(false);
   const [showVerification, setShowVerification] = useState(false);
   const [loading, setLoading] = useState(false);
   const phoneInput = useRef<PhoneInput>(null);
@@ -48,7 +47,6 @@ export function LoginWebScreen({ navigation }: any) {
   // function handleVerificationValidNumber() {
   //   const checkValid = phoneInput.current?.isValidNumber(value);
   //   setValid(checkValid ? checkValid : false);
-  //   console.log(`validdddd`, checkValid);
   //   if (checkValid) {
   //     handleRequestSMSCode();
   //   }
@@ -103,10 +101,6 @@ export function LoginWebScreen({ navigation }: any) {
 
   const { signIn } = useContext(AuthContext);
 
-  useEffect(() => {
-    checkFormatedTextLength();
-  }, [code, formattedValue]);
-
   function checkFormatedTextLength() {
     if (formattedValue.length > 7) {
       setFormattedTextLenght(false);
@@ -120,6 +114,10 @@ export function LoginWebScreen({ navigation }: any) {
       setFormattedCodeLength(true);
     }
   }
+
+  useEffect(() => {
+    checkFormatedTextLength();
+  }, [code, formattedValue]);
 
   function handleBottomBorderPhone() {
     setborderBottomPhone(true);

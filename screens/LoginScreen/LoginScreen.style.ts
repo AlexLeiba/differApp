@@ -157,7 +157,6 @@ export const stylesLogin = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 10,
     fontSize: 19,
-    // marginRight: 100,
     paddingLeft: 35,
     borderColor: "#cacaca",
   },
@@ -209,14 +208,12 @@ export const stylesLogin = StyleSheet.create({
   // phone country input:
   containerWebStyle: {
     width: "100%",
-    // backgroundColor: "#FFFFF",
     borderRadius: 4,
     borderStyle: "solid",
     borderWidth: 1,
     borderColor: "#cacaca",
   },
   textContainerWebStyle: {
-    // backgroundColor: "#FFFFF",
     paddingLeft: 8,
     paddingBottom: 0,
     paddingTop: 0,
