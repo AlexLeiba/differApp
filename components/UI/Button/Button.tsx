@@ -15,6 +15,7 @@ interface Props {
   backgroundImage?: string | number;
   disabled?: boolean;
   fontWeight?: string | number;
+  testID?: string;
 }
 export function Button({
   title,
@@ -29,6 +30,7 @@ export function Button({
   borderRadius,
   disabled,
   fontWeight,
+  testID,
 }: Props) {
   return (
     <Container
@@ -39,12 +41,14 @@ export function Button({
       borderRadius={borderRadius}
       backgroundImage={backgroundImage}
       disabled={disabled}
+      testID={`${testID}-button`}
     >
       <TextContainer
         colorTitle={colorTitle}
         fontSize={fontSize}
         textAlign={textAlign}
         fontWeight={fontWeight}
+        testID={`${testID}-text`}
       >
         {title}
       </TextContainer>

@@ -20,6 +20,12 @@ export type RootStackParamList = {
   Root: NavigatorScreenParams<RootTabParamList> | undefined;
   Modal: undefined;
   NotFound: undefined;
+  "invitation-mobile": {
+    formattedValue: string;
+  };
+  "verification-code": {
+    formattedValue: string;
+  };
 };
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> =

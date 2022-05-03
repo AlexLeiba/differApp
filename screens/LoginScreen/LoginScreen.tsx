@@ -16,8 +16,12 @@ import { LoginWebScreen } from "./LoginWebScreen";
 import { UserTokenStateContext } from "../../consts";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { stylesLogin } from "./LoginScreen.style";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import { RootStackParamList } from "../../types";
 
-export function LoginScreen({ navigation }: any) {
+type Props = NativeStackScreenProps<RootStackParamList>;
+
+export function LoginScreen({ navigation }: Props) {
   const [value, setValue] = useState("");
   const [formattedValue, setFormattedValue] = useState("");
   const [loading, setLoading] = useState(false);
@@ -139,13 +143,14 @@ export function LoginScreen({ navigation }: any) {
               disabled={loading}
               handlePress={handleVerificationValidNumber}
               textAlign="center"
-              colorContainer={"#38ae6f"}
+              colorContainer="#38ae6f"
               width={340}
               colorTitle="#e6e6e6"
               fontSize={16}
               title="Continue"
               padding={16}
               borderRadius={5}
+              testID="login"
             />
           </View>
         </KeyboardAvoidingView>

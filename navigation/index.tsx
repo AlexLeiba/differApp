@@ -96,7 +96,7 @@ function RootNavigator() {
             }
           />
           <Stack.Screen
-            name={"verification-code"}
+            name="verification-code"
             component={VerificationCode}
             options={
               Platform.OS !== "web"

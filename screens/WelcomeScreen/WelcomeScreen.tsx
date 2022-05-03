@@ -24,7 +24,7 @@ interface Props {
 export function WelcomeScreen({ navigation }: Props) {
   const [platform, setPlatform] = useState(false);
 
-  const { setUserNumber, userNumber } = useContext(UserTokenStateContext);
+  // const { setUserNumber } = useContext(UserTokenStateContext);
 
   function handleNavigation() {
     navigation.navigate("login");
@@ -47,7 +47,7 @@ export function WelcomeScreen({ navigation }: Props) {
 
   useEffect(() => {
     CheckPlatform();
-    setUserNumber("");
+    // setUserNumber("");
   }, []);
 
   return (
@@ -71,6 +71,7 @@ export function WelcomeScreen({ navigation }: Props) {
             handlePress={handleNavigation}
             colorContainer={"#38ae6f"}
             colorTitle={"#e6e6e6"}
+            testID="started"
           />
         </Container>
       ) : (
@@ -97,6 +98,7 @@ export function WelcomeScreen({ navigation }: Props) {
               borderRadius={"5px"}
               textAlign="center"
               colorContainer={"rgb(74, 144, 226)"}
+              testID="login"
             />
             <Spacer height={10} />
             <Button
@@ -112,6 +114,7 @@ export function WelcomeScreen({ navigation }: Props) {
               borderRadius={"5px"}
               textAlign="center"
               colorContainer={"rgb(74, 144, 226)"}
+              testID="community"
             />
             <ContainerIcon>
               <Image
