@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomePage component to not have changes should match snapshot 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "alignItems": "center",
+      "display": "flex",
+      "flexDirection": "column",
+      "height": "100%",
+      "justifyContent": "space-between",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "fontSize": 20,
+        "marginTop": 50,
+      }
+    }
+  >
+    Welcome on the home page!
+  </Text>
+  <View
+    style={
+      Object {
+        "marginBottom": 20,
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "black",
+          "borderRadius": 4,
+          "opacity": 1,
+          "paddingBottom": 16,
+          "paddingLeft": 16,
+          "paddingRight": 16,
+          "paddingTop": 16,
+          "width": 300,
+        }
+      }
+      testID="undefined-button"
+    >
+      <Text
+        colorTitle="white"
+        style={
+          Array [
+            Object {
+              "color": "white",
+              "fontSize": 20,
+              "textAlign": "center",
+            },
+          ]
+        }
+        testID="undefined-text"
+        textAlign="center"
+      >
+        Log out
+      </Text>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
